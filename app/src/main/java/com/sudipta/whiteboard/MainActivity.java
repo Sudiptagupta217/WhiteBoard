@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void greenColor(View view) {
-        paint_brush.setColor(Color.GREEN);
+        paint_brush.setColor(Color.rgb(22, 76, 25));
         currentColor(paint_brush.getColor());
     }
 
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void violetColor(View view) {
-        paint_brush.setColor(Color.CYAN);
+        paint_brush.setColor(Color.rgb(123, 32, 138));
         currentColor(paint_brush.getColor());
     }
 
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void skyBlueColor(View view) {
-        paint_brush.setColor(Color.DKGRAY);
+        paint_brush.setColor(Color.rgb(3,169,244));
         currentColor(paint_brush.getColor());
     }
 
@@ -80,4 +80,7 @@ public class MainActivity extends AppCompatActivity {
         current_brush =c;
         path = new Path();
     }
+
+
+
 }
