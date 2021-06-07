@@ -2,13 +2,22 @@ package com.sudipta.whiteboard;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.util.Date;
 
 import static com.sudipta.whiteboard.display.colorList;
 import static com.sudipta.whiteboard.display.current_brush;
@@ -25,10 +34,11 @@ public class MainActivity extends AppCompatActivity {
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);  //set full screen;
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE); // set screen orientation "LANDSCAPE"
+        //getSupportActionBar().hide();  //--> use this line or change the Themes
 
         setContentView(R.layout.activity_main);
 
-        //getSupportActionBar().hide();  //--> use this line or change the Themes
+
     }
     public void redColor(View view) {
         paint_brush.setColor(Color.RED);
@@ -80,7 +90,4 @@ public class MainActivity extends AppCompatActivity {
         current_brush =c;
         path = new Path();
     }
-
-
-
 }
